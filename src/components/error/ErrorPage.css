@@ -1,0 +1,16 @@
+#error-page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+#error-page h1{
+    font-size: 3rem;
+}
+
+#error-page i{
+    color: rgb(105, 105, 105);
+}
