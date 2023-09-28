@@ -1,5 +1,6 @@
 import './ErrorPage.css';
 import { useRouteError } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -7,11 +8,15 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+      <div className="box-error">
+        <h1 className='font-error'>Oops!</h1>
+        <p className='font-error'>Perdão, um erro inesperado ocorreu, tente novamente.</p>
+        <p className='font-error'>
+          <i>{error.statusText || error.message}</i>
+        </p>
+        <Link to="/" className="button-link">Ir para a página inicial</Link>
+      </div>
+      
     </div>
   );
 }
