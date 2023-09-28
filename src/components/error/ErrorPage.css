@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
+
 #error-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    background-image: url(../../assets/pinguim.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .box-error{
@@ -15,6 +20,7 @@
     justify-content: center;
     gap: 20px;
     padding: 55px;
+    max-width: 550px;
     border-radius: 11px;
     box-shadow: 1px 1px 3px 2px rgba(211, 211, 211, 0.622);
 }
@@ -30,12 +36,6 @@
 .font-error{
     font-family: 'Lora', sans-serif;
 }
-
-body{
-    background-image: url(../../assets/pinguim.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-}   
 
 .button-link {
     display: inline-block;
