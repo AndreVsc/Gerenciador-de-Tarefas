@@ -1,16 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 #error-page{
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
     height: 100vh;
-    gap: 20px;
 }
 
-#error-page h1{
+.box-error{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff75;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 55px;
+    border-radius: 11px;
+    box-shadow: 1px 1px 3px 2px rgba(211, 211, 211, 0.622);
+}
+
+.box-error h1{
     font-size: 3rem;
 }
 
-#error-page i{
+.box-error i{
     color: rgb(105, 105, 105);
 }
+
+.font-error{
+    font-family: 'Lora', sans-serif;
+}
+
+body{
+    background-image: url(../../assets/pinguim.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}   
+
+.button-link {
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: #3995f7; 
+    color: #fff; 
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Lora', sans-serif;
+  }
+  
+  .button-link:hover {
+    background-color: #0369d6; 
+  }
