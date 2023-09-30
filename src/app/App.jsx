@@ -1,9 +1,9 @@
 import './App.css';
-import Button from '../components/button/Button';
+import AdicionarBlock from '../components/Adicionar/AdicionarBlock';
 function App() {
   return(
     <>
-      <Button value='click'/>
+      <AdicionarBlock />
     </>
   );
 }
