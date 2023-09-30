@@ -14,7 +14,7 @@ export default function ErrorPage() {
         <p className='font-error'>
           <i>{error.statusText || error.message}</i>
         </p>
-        <Link to="/" className="button-link">Ir para a página inicial</Link>
+        <Link to="/" className="button-link">Ir para página inicial</Link>
       </div>
       
     </div>
