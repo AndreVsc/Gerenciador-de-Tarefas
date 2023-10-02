@@ -11,8 +11,9 @@ export default function Block({id,name,qtd,func}){
     return(
         <li key={id}>
             <div id='containBlock'>
-                <div id='nameBlock'>{name}</div>
-                <div>{qtd ? <p>{qtd}</p> : <p>0</p>}</div>
+                <p id='idBlock'>{id}#</p>
+                <p id='nameBlock'>{name}</p>
+                <div><p>{qtd}</p></div>
                 <div id='buttonsBlock'>
                     <Button func={handleDelete} value={<RiDeleteBin5Line fontSize={15}/>} classN='bnt-b'/>
                 </div>

@@ -12,6 +12,11 @@
     gap: 80px;
 }
 
+#idBlock{
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+
 #nameBlock{
     display: flex;
     align-items: center;
@@ -23,4 +28,3 @@
     align-items: center;
     flex-direction: column;
 }
-

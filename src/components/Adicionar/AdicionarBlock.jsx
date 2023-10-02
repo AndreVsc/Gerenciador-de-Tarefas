@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from "../button/Button";
 import BlockLista from './BlockLista';
-import Block from '../block/Block'; // Importe o componente Block
+import './AdicionarBlock.css';
 
 export default function AdicionarBlock() {
     const [block, setBlock] = useState([]);
@@ -20,8 +20,13 @@ export default function AdicionarBlock() {
 
     return (
         <>
-            <Button func={adicionarBlock} value='Adicionar' classN='bnt-b' />
-            <BlockLista blocos={block} onDeleteBlock={onDeleteBlock}/>
+            <div className='containerAdicionar'>
+                <div className='settingsAdicionar'>
+                    <input type="text" />
+                    <Button func={adicionarBlock} value='+ Novo' classN='bnt-b' />
+                </div>
+                <BlockLista blocos={block} onDeleteBlock={onDeleteBlock}/>
+            </div>
         </>
     );
 }
