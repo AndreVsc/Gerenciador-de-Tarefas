@@ -1,16 +1,23 @@
 import './Block.css';
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Button from '../button/Button.jsx';
-export default function Block({id,value,key,func}){
+
+export default function Block({id,name,qtd,func}){
+
+    const handleDelete = () => {
+        func(id);
+      };
+
     return(
-        <li key={key}>
+        <li key={id}>
             <div id='containBlock'>
-                <div id='nameBlock'>{id ? <><p>{id}#</p><p>Produto</p></> : <><p>????#</p><p>Produto</p></>}</div>
-                <div>{value ? <p>{value}</p> : <p>0</p>}</div>
+                <div id='nameBlock'>{name}</div>
+                <div>{qtd ? <p>{qtd}</p> : <p>0</p>}</div>
                 <div id='buttonsBlock'>
-                    <Button func={func}value={<RiDeleteBin5Line fontSize={15}/>} classN='bnt-b'/>
+                    <Button func={handleDelete} value={<RiDeleteBin5Line fontSize={15}/>} classN='bnt-b'/>
                 </div>
             </div>
         </li>
     )
 }
+

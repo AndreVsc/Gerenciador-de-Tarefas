@@ -1,39 +1,27 @@
 import React, { useState } from 'react';
 import Button from "../button/Button";
-import Block from "../block/Block";
+import BlockLista from './BlockLista';
+import Block from '../block/Block'; // Importe o componente Block
 
 export default function AdicionarBlock() {
-    const [count, setCount] = useState(1);
-    const [blockAdd, setBlockAdd] = useState([]);
+    const [block, setBlock] = useState([]);
+    const [id, setId] = useState(0);
 
-    const adicionar = () => {
-        const novoBlock = (
-            <Block
-                key={count}
-                id={count}
-                value={10}
-                func={() => removerBlock(count)} // Passa o id como argumento
-            ></Block>
-        );
-        setBlockAdd([...blockAdd, novoBlock]);
-        setCount(count + 1);
+    const adicionarBlock = () => {
+        const novoBloco = { id, name: `Bloco ${id + 1}`, qtd: 0 };
+        setBlock([...block, novoBloco]);
+        setId(id + 1);
     };
 
-    const removerBlock = (id) => { // Recebe o id como argumento
-        const novaLista = blockAdd.filter((componente) => {
-            return componente.props.id !== id;
-        });
-        setBlockAdd(novaLista);
-    };
+    const onDeleteBlock = (blocoId) => {
+        const novaListaDeBlocos = block.filter((bloco) => bloco.id !== blocoId);
+        setBlock(novaListaDeBlocos);
+      };
 
     return (
         <>
-            <Button func={adicionar} value='Adicionar' classN='bnt-b' />
-            {blockAdd.map((componente) => (
-                <ul key={componente.props.id}>
-                    {componente}
-                </ul>
-            ))}
+            <Button func={adicionarBlock} value='Adicionar' classN='bnt-b' />
+            <BlockLista blocos={block} onDeleteBlock={onDeleteBlock}/>
         </>
     );
 }
