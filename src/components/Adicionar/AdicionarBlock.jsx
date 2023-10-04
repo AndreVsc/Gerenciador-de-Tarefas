@@ -22,7 +22,7 @@ export default function AdicionarBlock() {
         <>
             <div className='containerAdicionar'>
                 <div className='settingsAdicionar'>
-                    <input type="text" />
+                    <input id='serchBlock' type="text" />
                     <Button func={adicionarBlock} value='+ Novo' classN='bnt-b' />
                 </div>
                 <BlockLista blocos={block} onDeleteBlock={onDeleteBlock}/>

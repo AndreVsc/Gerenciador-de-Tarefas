@@ -7,5 +7,16 @@
 
 .settingsAdicionar{
     display: flex;
-    gap: 60px;
+    gap: 120px;
+}
+
+#serchBlock{
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#serchBlock:focus{
+    outline: none;
 }
