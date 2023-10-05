@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-#serchBlock {
+#searchBlock {
     box-shadow: 0px 0px 1px 1px #c9c9c9;
     border-radius: 0px 21px 21px 0px;
     color: #777777;
@@ -51,10 +51,11 @@
     border: none;
 }
 
-#serchBlock:focus{
+#searchBlock:focus{
     outline: none;
 }
-#containerSerch button {
+
+#containerSearch button {
     background-color:rgb(25, 113, 189);
     color: #fff;
     width: 30px;
@@ -62,5 +63,11 @@
     box-shadow: 0px 0px 0px 1px rgb(25, 113, 189);
     border-radius: 21px 0px 0px 21px;
     border: none;
+    outline: none;
   }
   
+  #textp{
+    margin-top: 100px;
+    text-align: center;
+    color: #777777;
+  }
