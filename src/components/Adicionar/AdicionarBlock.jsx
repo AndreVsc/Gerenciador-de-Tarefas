@@ -29,7 +29,7 @@ export default function AdicionarBlock() {
     const serchBlock = (e) => {
         e.preventDefault()
         setOutherBlock(block);
-        const results = block.filter((bloco)=> bloco.name===search);
+        const results = block.filter((bloco)=> bloco.name.includes(search) );
         if(search!="" && numBlock===0){
             setBlock(results);
             setNumBlock(numBlock+1);
