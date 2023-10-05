@@ -7,5 +7,60 @@
 
 .settingsAdicionar{
     display: flex;
-    gap: 60px;
+    gap: 120px;
 }
+
+#containerRolagem{
+    border: 1px solid #c9c9c9;
+    border-radius: 21px;
+    max-width: 400px;
+    width: 100%;
+    height: 50vh;
+    margin: 10px;
+    overflow:auto;
+    z-index: 1;
+}
+
+#containerRolagem::-webkit-scrollbar{
+    width: 0.3em; 
+}
+
+#containerRolagem::-webkit-scrollbar-thumb{
+    z-index: 0;
+    background-color: rgb(99, 160, 212);
+    border-radius: 21px;
+}
+
+#containerRolagem::-webkit-scrollbar-track{
+    margin: 30px;
+}
+
+#containerSerch {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#serchBlock {
+    box-shadow: 0px 0px 1px 1px #c9c9c9;
+    border-radius: 0px 21px 21px 0px;
+    color: #777777;
+    width: 120px;
+    padding: 5px;
+    border: none;
+}
+
+#serchBlock:focus{
+    outline: none;
+}
+#containerSerch button {
+    background-color:rgb(25, 113, 189);
+    color: #fff;
+    width: 30px;
+    padding: 5px;
+    box-shadow: 0px 0px 0px 1px rgb(25, 113, 189);
+    border-radius: 21px 0px 0px 21px;
+    border: none;
+  }
+  
