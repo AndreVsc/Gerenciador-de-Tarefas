@@ -1,0 +1,28 @@
+.Navbar-conatainer a{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 50px;
+    opacity: 1;
+}
+
+.Navbar-conatainer a:hover{
+    transition: 0.2s font-size ease-in-out;
+    font-size: 21px;
+    opacity: 0.90;
+}
+
+.Navbar-conatainer a:active{
+    opacity: 0.70;
+}
+
+.Navbar-conatainer ul{
+    
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
+    gap: 30px;
+    color: rgb(255, 255, 255);
+}
+

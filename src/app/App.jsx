@@ -1,9 +1,14 @@
 import './App.css';
-import AdicionarBlock from '../components/Adicionar/AdicionarBlock';
+import { Outlet } from 'react-router-dom';
+import NavbarEstoque from "../components/navbar/NavbarEstoque";
 function App() {
   return(
     <>
-      <AdicionarBlock />
+      <div className='containerNavInicial'>
+          <NavbarEstoque />
+          <Outlet />
+      </div>
+  
     </>
   );
 }

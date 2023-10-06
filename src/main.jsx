@@ -1,15 +1,30 @@
+// Css
+import './index.css';
+
+// React + Router
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './components/error/ErrorPage.jsx';
+
+// Paginas
 import App from './app/App.jsx';
-import './index.css';
+import ErrorPage from './pages/error/ErrorPage.jsx';
+import PaginaInicial from './pages/inicial/PaginaInicial';
+import PaginaEstoque from './pages/estoque/PaginaEstoque';
 
 const router = createBrowserRouter([
   {
-    path:"/",
     element: <App/>,
     errorElement: <ErrorPage />,
+    children: [{
+      path:"/",
+      element: <PaginaInicial />
+    },
+    {
+      path:"estoque",
+      element: <PaginaEstoque />
+    }
+  ]
   }
 ]);
 

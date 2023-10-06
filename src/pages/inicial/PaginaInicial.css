@@ -1,0 +1,21 @@
+.containerInicial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.componenteInicial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    max-height: 450px;  
+}

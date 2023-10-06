@@ -5,3 +5,32 @@
     gap: 10px;
     padding: 20px;
 }
+#containBlock{
+    border: 1px solid #c9c9c9;
+    background-color: #ffff;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 11px;
+    min-width: 350px;
+    font-size: 13px;
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+}
+
+#idBlock{
+    font-size: 12px;
+    color: rgb(88, 88, 88);
+}
+
+#nameBlock{
+    display: flex;
+    align-items: center;
+}
+
+#buttonsBlock{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
