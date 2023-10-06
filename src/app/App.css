@@ -1,0 +1,17 @@
+.containerNavInicial{
+    display: flex;
+    background-image: url('../assets/waves-removebg.png');
+    background-repeat: no-repeat;
+    background-position-y:bottom;
+    background-size: cover;
+}
+
+
+
+nav{
+    padding: 20px 0px;
+    height: 100vh;
+    max-width: 50px;
+    float: left;
+    background-color: rgb(25, 113, 189)
+}
