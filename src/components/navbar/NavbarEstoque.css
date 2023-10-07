@@ -15,8 +15,7 @@
     opacity: 0.70;
 }
 
-.Navbar-conatainer ul{
-    
+.Navbar-conatainer ul{   
     display: flex;
     padding: 10px;
     align-items: center;
@@ -24,5 +23,28 @@
     width: 30px;
     gap: 30px;
     color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-device-width: 900px) {
+    .Navbar-conatainer ul {
+        display: flex;
+        justify-items:center;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+
+    .Navbar-conatainer a{
+        color: rgb(255, 255, 255);
+        font-size: 10px;
+        font-size: 12pxs;
+        width: 12px;
+        opacity: 1;
+    }
+    
+    .Navbar-conatainer a:hover{
+        transition: none;
+        font-size: 12px;
+        opacity: 0.90;
+    }
 }
 

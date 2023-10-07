@@ -12,7 +12,8 @@
     flex-direction: row;
     align-items: center;
     border-radius: 11px;
-    min-width: 350px;
+    /* min-width: 350px; */
+    width: 340px;
     font-size: 13px;
     display: flex;
     padding: 10px;
