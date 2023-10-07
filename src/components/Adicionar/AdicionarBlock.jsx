@@ -4,7 +4,6 @@ import BlockLista from './BlockLista';
 import {HiSearch} from 'react-icons/hi';
 import {AiOutlineLeft} from 'react-icons/ai';
 import './AdicionarBlock.css';
-import DeleteBlock from './DeleteBlock';
 
 export default function AdicionarBlock() {
     const [block, setBlock] = useState([]);
@@ -22,10 +21,17 @@ export default function AdicionarBlock() {
         }
     };
     
+    const alterBlock = ()=>{
+        setBlock(outherBlock);
+        setNumBlock(0)
+    }
+
     const onDeleteBlock = (blocoId) => {
-        const novaListaDeBlocos = block.filter((bloco) => bloco.id !== blocoId);
-        setBlock(novaListaDeBlocos);
-    };
+        if(numBlock!=1){
+            const novaListaDeBlocos = block.filter((bloco) => bloco.id !== blocoId);
+            setBlock(novaListaDeBlocos);
+        }
+    }
     
     const serchBlock = (e) => {
         e.preventDefault()
@@ -53,7 +59,7 @@ export default function AdicionarBlock() {
                     </form>
                 </div>
                 <div id='containerRolagem'>                
-                    {block==''?(<p className='textp'>Nenhum Produto</p>):(<BlockLista  blocos={block} onDeleteBlock={onDeleteBlock}/>)}
+                    {block==''?(<p className='textp'>Nenhum Produto</p>):(<BlockLista  blocos={block} onDeleteBlock={onDeleteBlock} alter={alterBlock}/>)}
                 </div>
             </div>
         </>

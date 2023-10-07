@@ -4,7 +4,7 @@ import Button from '../button/Button';
 import './BlockLista.css';
 import DeleteBlock from './DeleteBlock';
 
-export default function BlockLista({ blocos, onDeleteBlock }) {
+export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
     const [show, setShow] = useState(false);
     const [selectedBlockId, setSelectedBlockId] = useState(null);
 
@@ -16,6 +16,7 @@ export default function BlockLista({ blocos, onDeleteBlock }) {
     useEffect(() => {
         if (show) {
             // Render the DeleteBlock component when show is true
+            alter()
             return () => {
                 setSelectedBlockId(null);
                 setShow(false);

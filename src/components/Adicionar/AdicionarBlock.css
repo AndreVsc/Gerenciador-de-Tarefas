@@ -74,9 +74,14 @@
     color: #777777;
   }
 
-  @media only screen and (max-device-width: 900px) {
+  #containerSearch{
+    display: flex;
+    }
+
+  @media only screen and (max-device-width: 00px) {
     .containerAdicionar{
         border-radius: 21px;
         border: 1px solid #fff;
     }
+
   }

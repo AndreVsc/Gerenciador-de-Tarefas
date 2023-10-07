@@ -7,7 +7,7 @@ function DeleteBlock({reset,func,bloco}) {
         func(bloco);
         reset(false);
     }
-
+    
     const cancelDelete = () =>{
         reset(false);
     }

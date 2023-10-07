@@ -1,50 +1,65 @@
+.Navbar-conatainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 0px;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 60px;
+    background-color: rgb(25, 113, 189)
+}
+
 .Navbar-conatainer a{
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    width: 50px;
-    opacity: 1;
+    
 }
 
 .Navbar-conatainer a:hover{
-    transition: 0.2s font-size ease-in-out;
-    font-size: 21px;
-    opacity: 0.90;
+
 }
 
 .Navbar-conatainer a:active{
     opacity: 0.70;
 }
 
-.Navbar-conatainer ul{   
+.Navbar-conatainer ul{
     display: flex;
-    padding: 10px;
-    align-items: center;
     flex-direction: column;
-    width: 30px;
-    gap: 30px;
     color: rgb(255, 255, 255);
+    font-size: x-large;
+    gap: 30px;
 }
 
 @media only screen and (max-device-width: 900px) {
+
+    .Navbar-conatainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 20px 10px;
+        max-height: 50px;
+        width: 100%;
+        max-width: 100vw;
+        background-color: rgb(25, 113, 189)
+    }
+
     .Navbar-conatainer ul {
         display: flex;
-        justify-items:center;
-        flex-wrap: wrap;
-        gap: 0px;
+        flex-direction: row;
+        color: rgb(255, 255, 255);
+        font-size: large;
+        gap: 30px;
     }
 
     .Navbar-conatainer a{
-        color: rgb(255, 255, 255);
-        font-size: 10px;
-        font-size: 12pxs;
-        width: 12px;
-        opacity: 1;
+        
     }
     
     .Navbar-conatainer a:hover{
-        transition: none;
-        font-size: 12px;
-        opacity: 0.90;
+        
     }
 }
+
 
