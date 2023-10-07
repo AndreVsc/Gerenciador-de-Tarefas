@@ -22,8 +22,10 @@ export default function AdicionarBlock() {
     };
     
     const alterBlock = ()=>{
-        setBlock(outherBlock);
-        setNumBlock(0)
+        if(numBlock!=0){
+            setBlock(outherBlock);
+            setNumBlock(0)
+        }
     }
 
     const onDeleteBlock = (blocoId) => {
