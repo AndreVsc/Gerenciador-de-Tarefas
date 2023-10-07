@@ -1,24 +1,26 @@
 .containerAdicionar{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
+    border-radius: 21px;
+    border: 1px solid #c9c9c9;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+    max-height: 450px;
+    padding: 15px;
 }
 
 .settingsAdicionar{
     display: flex;
-    gap: 120px;
+    padding: 10px;
+    gap: 8rem;
 }
 
 #containerRolagem{
-    border: 1px solid #c9c9c9;
+
     border-radius: 21px;
     max-width: 400px;
     min-width: 380px;
-    width: 100%;
-    height: 50vh;
-    margin: 10px;
+    height: 400px;
     overflow:auto;
 }
 
@@ -44,7 +46,7 @@
 
 #searchBlock {
     border: 1px solid #c9c9c9;
-    border-radius: 0px 21px 21px 0px;
+    border-radius: 0px 11px 11px 0px;
     color: #777777;
     width: 120px;
     padding: 5px;
@@ -56,7 +58,7 @@
 
 #containerSearch button {
     background-color:rgb(25, 113, 189);
-    border-radius: 21px 0px 0px 21px;
+    border-radius: 11px 0px 0px 11px;
     border: 1px solid rgb(25,113,189);
     font-size: small;
     color: #fff;
@@ -70,4 +72,11 @@
     margin-top: 100px;
     text-align: center;
     color: #777777;
+  }
+
+  @media only screen and (max-device-width: 900px) {
+    .containerAdicionar{
+        border-radius: 21px;
+        border: 1px solid #fff;
+    }
   }
