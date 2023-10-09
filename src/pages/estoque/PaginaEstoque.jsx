@@ -1,8 +1,11 @@
 import React from 'react'
-
+import './PaginaEstoque.css'
+import FormEstoque from '../../components/formulario/FormEstoque'
 function PaginaEstoque() {
   return (
-    <div>PaginaEstoque</div>
+      <div className='containerEstoque'>
+        <FormEstoque/>
+    </div>
   )
 }
 
