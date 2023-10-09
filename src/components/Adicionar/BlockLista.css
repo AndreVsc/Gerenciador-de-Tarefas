@@ -6,7 +6,7 @@
     padding: 20px;
     
 }
-#containBlock{
+#listBlocks li{
     border: 1px solid #c9c9c9;
     background-color: #ffff;
     justify-content: space-between;
@@ -39,7 +39,7 @@
 
 @media only screen and (max-device-width: 900px) {
 
-    #containBlock{
+    #listBlocks li{
         display: flex;
         border: 1px solid #c9c9c9;
         background-color: #ffff;
@@ -48,7 +48,7 @@
         align-items: center;
         border-radius: 11px;
         width: 90%;
-        min-width:220px;
+        min-width:200px;
         max-width: 340px;
         display: flex;
         padding: 8px;
