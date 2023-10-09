@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px;
+    
 }
 #containBlock{
     border: 1px solid #c9c9c9;
@@ -46,7 +47,7 @@
         flex-direction: row;
         align-items: center;
         border-radius: 11px;
-        width: 30%;
+        width: 90%;
         min-width:220px;
         max-width: 340px;
         display: flex;
@@ -59,6 +60,8 @@
         align-items: center;
         flex-direction: column;
         gap:10px;
-        padding: 20px;
+        padding: 0px;
+        width: 100%;
+
     }
 }
