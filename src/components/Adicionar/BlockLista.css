@@ -35,3 +35,30 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media only screen and (max-device-width: 900px) {
+
+    #containBlock{
+        display: flex;
+        border: 1px solid #c9c9c9;
+        background-color: #ffff;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 11px;
+        width: 30%;
+        min-width:220px;
+        max-width: 340px;
+        display: flex;
+        padding: 8px;
+        gap: 0px;
+    }
+
+    #listBlocks{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap:10px;
+        padding: 20px;
+    }
+}
