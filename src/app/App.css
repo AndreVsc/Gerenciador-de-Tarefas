@@ -7,5 +7,9 @@
 @media only screen and (max-device-width: 900px) {
     .containerNavInicial{
         flex-direction: column;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
     }
 }
