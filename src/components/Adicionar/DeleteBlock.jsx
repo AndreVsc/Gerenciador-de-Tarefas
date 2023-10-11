@@ -4,6 +4,7 @@ import Button from '../button/Button';
 function DeleteBlock({reset,func,bloco}) {
 
     const handleDelete = () =>{
+        localStorage.removeItem("Bloco");
         func(bloco);
         reset(false);
     }

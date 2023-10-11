@@ -29,13 +29,11 @@ export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
             <ul id='listBlocks'>
                 {blocos.map((bloco) => (
                     <li key={bloco.id}>
-                        <div id='containBlock'>
-                            <p id='idBlock'>{bloco.id}#</p>
-                            <p id='nameBlock'>{bloco.name}</p>
-                            <div><p>{bloco.qtd}</p></div>
-                            <div id='buttonsBlock'>
-                                <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />
-                            </div>
+                        <p id='idBlock'>{bloco.id}#</p>
+                        <p id='nameBlock'>{bloco.name}</p>
+                        <div><p>{bloco.qtd}</p></div>
+                        <div id='buttonsBlock'>
+                            <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />
                         </div>
                     </li>
                 ))}

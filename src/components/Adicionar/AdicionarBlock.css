@@ -112,10 +112,10 @@
         background-color: rgb(255, 255, 255);
         width: 100%;
         min-width: 200px;
-        margin: 15px;
+        margin: 12px;
         max-width: 400px;
         max-height: 380px;
-        padding:10px 0px 10px 0px ;
+        padding:10px 5px 10px 5px ;
 }
 
     #containerRolagem{

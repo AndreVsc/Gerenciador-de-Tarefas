@@ -1,0 +1,14 @@
+.containerEstoque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+@media only screen and (max-device-width: 900px) {
+    .containerEstoque{
+        height: 90vh;
+    }
+}

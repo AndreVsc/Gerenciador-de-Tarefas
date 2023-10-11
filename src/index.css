@@ -22,7 +22,7 @@ li{
     *{
         margin: 0;
         padding: 0;
-        overflow-y:show ;
+        overflow-y:visible;
     }
     
     p{
