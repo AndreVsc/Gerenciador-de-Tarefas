@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import SettingsBlock from './SettingsBlock';
 import BlockLista from './BlockLista';
 import {HiSearch} from 'react-icons/hi';
@@ -11,8 +11,27 @@ export default function AdicionarBlock() {
     const [search, setSearch] = useState([]);
     const [numBlock, setNumBlock] = useState(0);
     const [id, setId] = useState(0);
+    
+    useEffect(()=>{
+        const storedData = localStorage.getItem("Bloco");
+        const storedId = localStorage.getItem("Id");
+        if (storedData) {
+            setBlock(JSON.parse(storedData));
+            setId(JSON.parse(storedId));
+        }
+    },[])
+    
+    useEffect((storedId)=>{
 
-
+        if(id>0){
+            localStorage.setItem("Bloco",JSON.stringify(block));
+            localStorage.setItem("Id",id);
+        }else if(id==0 && storedId){
+            setId(localStorage.getItem("Id"));
+        }
+        
+    },[id])
+    
     const addBlock = () => {
         if(numBlock!=1){
             const novoBloco = { id, name: `Bloco ${id + 1}`, qtd: 0 };
@@ -27,10 +46,11 @@ export default function AdicionarBlock() {
             setNumBlock(0)
         }
     }
-
+    
     const onDeleteBlock = (blocoId) => {
         if(numBlock!=1){
             const novaListaDeBlocos = block.filter((bloco) => bloco.id !== blocoId);
+            localStorage.setItem("Bloco",JSON.stringify(novaListaDeBlocos));
             setBlock(novaListaDeBlocos);
         }
     }
