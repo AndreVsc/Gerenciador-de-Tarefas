@@ -14,3 +14,36 @@
     color: #9c9c9c;
     font-size: medium;
 }
+
+#inputBnt{
+    padding: 10px;
+}
+
+#formEstoque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+    height: 100%;
+    max-height: 430px;
+    max-width: 400px;
+
+}
+
+#inputsEstoque{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#inputsEstoque input:nth-child(1){
+    min-width: 350px;
+}
+
+.inputText{
+    border-radius: 21px;
+    padding: 10px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+}
