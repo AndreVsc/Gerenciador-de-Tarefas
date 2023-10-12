@@ -4,14 +4,17 @@ function FormEstoque() {
   return (
     <div className='containerForm'>
         <div>
-            <form action="">
-                <p>O formulário de adição de produto é onde você insere informações sobre um novo produto no sistema. Ele possui campos para detalhes como nome, preço, quantidade e descrição, garantindo que todas as informações essenciais sejam registradas de forma organizada para facilitar a adição eficiente de novos produtos.</p>
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <input type="submit" />
+            <form id='formEstoque'>
+                <div id='inputsEstoque'>
+                  <input className='inputText' type="text" placeholder='Nome do Produto' />
+                  <input className='inputText' type="text" placeholder='Marca'/>
+                  <input className='inputText' type="number" placeholder='Quantidade'/>
+                  <input className='inputText' type="text" placeholder='Valor de Venda'/>
+                  <input className='inputText' type="text" placeholder='Custo do Produto'/>
+                  <input className='inputText' type="text" placeholder='Quantidade MIN'/>
+                </div>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"/>
+                <input id='inputBnt' className='bnt-b' type="submit" value={"Criar Produto"} />
             </form>
         </div>
     </div>
