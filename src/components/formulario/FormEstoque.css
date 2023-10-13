@@ -1,49 +1,169 @@
 .containerForm{
+    display: flex;
+    align-items: center;
+    justify-items: center;
     border-radius: 21px;
     border: 1px solid #c9c9c9;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    min-width: 300px;
     max-width: 400px;
     height: 100%;
     max-height: 450px;
     padding: 15px;
+    margin: 4px;
+    overflow: hidden;
 }
 
-.containerForm p{
-    color: #9c9c9c;
-    font-size: medium;
-}
 
 #inputBnt{
     padding: 10px;
+    text-align: center;
+    overflow: hidden;
 }
 
 #formEstoque{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     padding: 10px;
     height: 100%;
-    max-height: 430px;
+    max-height: 440px;
     max-width: 400px;
-
 }
 
 #inputsEstoque{
     display: flex;
     flex-wrap: wrap;
+    max-width: 380px;
+    max-height: 200px;
     gap: 10px;
+    overflow: visible;
 }
 
-#inputsEstoque input:nth-child(1){
-    min-width: 350px;
+#inputChild-1{
+    width: 100%;
+    max-width:370px;
+    height: 15px;
+}
+
+#inputChild-2{
+    width: 100%;
+    max-width:235px;
+    height: 15px;
+}
+
+#inputChild-3{
+    width: 100%;
+    max-width:90px;
+    height: 15px;
+}
+
+#inputChild-4{
+    width: 100%;
+    max-width:235px;
+    height: 15px;
+}
+
+#inputChild-5{
+    width: 100%;
+    max-width:90px;
+    height: 15px;
+}
+
+#inputChild-6{
+    width: 100%;
+    max-width:162px;
+    height: 15px;
+}
+
+#inputChild-7{
+    width: 100%;
+    max-width:162.5px;
+    height: 15px;
 }
 
 .inputText{
+    color: #727272;
     border-radius: 21px;
     padding: 10px;
     border: 1px solid #c9c9c9;
     outline: none;
 }
+
+.inputArea{
+    width: 100%;
+    max-width: 370px;
+    height: 140px;
+    border-radius: 21px;
+    padding: 10px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #727272;
+    text-align: start;
+    resize:none;
+}
+
+@media only screen and (max-device-width: 900px) {
+
+    .containerForm{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        border-radius: 21px;
+        border: 1px solid #c9c9c9;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        max-height: 450px;
+        padding: 15px;
+        margin: 12px;
+        overflow: hidden;
+    }
+    
+
+    #inputsEstoque{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 480px;
+        max-height: 230px;
+        gap: 10px;
+        overflow:scroll;
+    }
+
+    #inputChild-1{
+        width: 300px;
+        height: 10px;
+    }
+
+    #inputChild-2,#inputChild-3,#inputChild-4,#inputChild-5,#inputChild-6,#inputChild-7{
+        max-width: 135px;
+        width: 100%;
+        height: 10px;
+    }
+
+    .inputArea{
+        width: 100%;
+        max-width: 310px;
+        height: 140px;
+        border-radius: 21px;
+        padding: 8px;
+        border: 1px solid #c9c9c9;
+        outline: none;
+        color: #727272;
+        text-align: start;
+        resize:none;
+    }
+
+}
+
+@media only screen and (max-device-width: 395px) {
+    #inputChild-1{
+        display: flex;
+        width: 140px;
+        height: 10px;
+    }
+}   
