@@ -3,23 +3,41 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import Button from '../button/Button';
 import './BlockLista.css';
 import DeleteBlock from './DeleteBlock';
+import { Link } from 'react-router-dom';
+import Detalhes from '../Detalhes/Detalhes';
 
 export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
+
     const [show, setShow] = useState(false);
+    const [detalhes, setDetalhes] = useState(false);
     const [selectedBlockId, setSelectedBlockId] = useState(null);
+    const [storeData, setStoreData] = useState([]);
 
     function mostrarTudo(blocoid) {
         setSelectedBlockId(blocoid);
         setShow(true);
     }
 
+    function mostrarDetalhes(blocoid) {
+        setSelectedBlockId(blocoid);
+        setDetalhes(true);
+    }
+
+    useEffect(()=>{
+        const storedData = localStorage.getItem("produtoData");
+        if (storedData) {
+            const parsedData = JSON.parse(storedData);
+            setStoreData(parsedData);
+        }
+    },[])
+
     useEffect(() => {
-        if (show) {
-            // Render the DeleteBlock component when show is true
+        if (show || detalhes) {
             alter()
             return () => {
                 setSelectedBlockId(null);
                 setShow(false);
+                setDetalhes(false)
             };
         }
     }, [show]);
@@ -29,9 +47,9 @@ export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
             <ul id='listBlocks'>
                 {blocos.map((bloco) => (
                     <li key={bloco.id}>
-                        <p id='idBlock'>{bloco.id}#</p>
-                        <p id='nameBlock'>{bloco.name}</p>
-                        <div><p>{bloco.qtd}</p></div>
+                        <p id='idBlock'>{storeData.venda} R$</p>
+                        <p onClick={() => mostrarDetalhes(bloco.id)} className='nameBlock'>{storeData.produto}</p>
+                        <div><p>{storeData.quantidade}x</p></div>
                         <div id='buttonsBlock'>
                             <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />
                         </div>
@@ -39,6 +57,7 @@ export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
                 ))}
             </ul>
             {show && <DeleteBlock reset={setShow} bloco={selectedBlockId} func={onDeleteBlock} />}
+            {detalhes && <Detalhes reset={setDetalhes} storeData={storeData}/>}
         </>
     );
 }
