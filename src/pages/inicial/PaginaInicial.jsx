@@ -4,7 +4,7 @@ import AdicionarBlock from '../../components/Adicionar/AdicionarBlock'
 function PaginaInicial() {
   return (
     <div className='containerInicial'>
-          <AdicionarBlock />
+          <AdicionarBlock/>
     </div>
   )
 }

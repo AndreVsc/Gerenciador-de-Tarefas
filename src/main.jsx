@@ -11,6 +11,7 @@ import App from './app/App.jsx';
 import ErrorPage from './pages/error/ErrorPage.jsx';
 import PaginaInicial from './pages/inicial/PaginaInicial';
 import PaginaEstoque from './pages/estoque/PaginaEstoque';
+import Detalhes from './components/Detalhes/Detalhes'
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [{
       path:"/",
-      element: <PaginaInicial />
+      element: <PaginaInicial/>
     },
     {
       path:"estoque",
-      element: <PaginaEstoque />
+      element: <PaginaEstoque/>
+    },
+    {
+      path:"detalhes/:id",
+      element: <Detalhes/>
     }
   ]
   }

@@ -6,6 +6,7 @@ import {AiOutlineLeft} from 'react-icons/ai';
 import './AdicionarBlock.css';
 
 export default function AdicionarBlock() {
+
     const [block, setBlock] = useState([]);
     const [outherBlock, setOutherBlock] = useState([]);
     const [search, setSearch] = useState([]);
