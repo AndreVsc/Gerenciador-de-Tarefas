@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import SettingsBlock from './SettingsBlock';
+import { Link } from 'react-router-dom';
 import BlockLista from './BlockLista';
 import {HiSearch} from 'react-icons/hi';
 import {AiOutlineLeft} from 'react-icons/ai';
@@ -17,7 +17,7 @@ export default function AdicionarBlock() {
         const storedData = localStorage.getItem("Bloco");
         const storedId = localStorage.getItem("Id");
         if (storedData) {
-            setBlock(JSON.parse(storedData));
+            setBlock(...block,JSON.parse(storedData));
             setId(JSON.parse(storedId));
         }
     },[])
@@ -75,7 +75,7 @@ export default function AdicionarBlock() {
         <>
             <div className='containerAdicionar'>
                 <div className='settingsAdicionar'>
-                    <SettingsBlock addBlock={addBlock}/>
+                    <Link className='bnt-b' to={'/estoque'}>Novo</Link>
                     <form id='containerSearch'>
                         <button type="submit" onClick={serchBlock}>{numBlock==0? (<HiSearch />) : (<AiOutlineLeft />)}</button>
                         <input placeholder='pesquisa' onChange={(e) => setSearch(e.target.value)} id='searchBlock' type="text" />

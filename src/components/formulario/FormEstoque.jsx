@@ -18,6 +18,7 @@ export default function FormEstoque() {
 
   function enviarProduto(){
     localStorage.setItem('produtoData', JSON.stringify(produtoData));
+    
   }
 
   useEffect(()=>{
