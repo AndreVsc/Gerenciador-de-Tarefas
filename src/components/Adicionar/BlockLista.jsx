@@ -3,7 +3,6 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import Button from '../button/Button';
 import './BlockLista.css';
 import DeleteBlock from './DeleteBlock';
-import { Link } from 'react-router-dom';
 import Detalhes from '../Detalhes/Detalhes';
 
 export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
@@ -47,17 +46,17 @@ export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
             <ul id='listBlocks'>
                 {blocos.map((bloco) => (
                     <li key={bloco.id}>
-                        <p id='idBlock'>{storeData.venda} R$</p>
-                        <p onClick={() => mostrarDetalhes(bloco.id)} className='nameBlock'>{storeData.produto}</p>
-                        <div><p>{storeData.quantidade}x</p></div>
+                        <p id='idBlock'>{bloco.venda} R$</p>
+                        <p onClick={() => mostrarDetalhes(bloco.id)} className='nameBlock'>{bloco.produto}</p>
+                        <div><p>{bloco.quantidade}x</p></div>
                         <div id='buttonsBlock'>
-                            <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />
+                        <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />
                         </div>
                     </li>
                 ))}
             </ul>
-            {show && <DeleteBlock reset={setShow} bloco={selectedBlockId} func={onDeleteBlock} />}
-            {detalhes && <Detalhes reset={setDetalhes} storeData={storeData}/>}
+            {show && <DeleteBlock reset={setShow} id={selectedBlockId} func={onDeleteBlock} />}
+            {detalhes && <Detalhes reset={setDetalhes} id={selectedBlockId} storeData={storeData}/>}
         </>
     );
 }

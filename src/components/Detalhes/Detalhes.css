@@ -1,7 +1,5 @@
-/* ()=>{onDeleteBlock(bloco.id)} */
-
 /* Estilos para o fundo escuro */
-.overlay {
+.overlayDetalhes {
     display: flex;
     position: fixed;
     top: 0;
@@ -15,42 +13,32 @@
 }
 
 /* Estilos para o formulário pop-up */
-.overlay .popup {
+.overlayDetalhes .popupDetalhes {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    background-color: #fff ; /* Adicione o fundo branco aqui com !important */
-    padding: 30px;
-    text-align: center;
+    max-width:600px;
+    background-color: #fff ;
+    padding: 40px;
     z-index: 2;
-    border-radius: 8px;
+    border-radius: 21px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.bnt-d{
-    display: flex;
     gap: 20px;
-    align-items: center;
 }
 
-.bnt-d button{
-    width: 100px;
-    padding: 10px;
+#containerDetalhes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-@media only screen and (max-device-width: 900px) {
-    .overlay .popup {
-        font-size: small;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        background-color: #fff ; /* Adicione o fundo branco aqui com !important */
-        padding: 10px;
-        text-align: center;
-        z-index: 2;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }    
+.infos{
+    display: flex;
+    flex-direction: column;
+    color: #6e6e6e;
+    font-size: small;
+    gap: 2px;
+}   
+
+@media only screen and (max-device-width: 900px) {  
 }

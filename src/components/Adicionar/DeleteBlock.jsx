@@ -1,11 +1,10 @@
 import React from 'react';
 import './DeleteBlock.css';
 import Button from '../button/Button';
-function DeleteBlock({reset,func,bloco}) {
+function DeleteBlock({reset,func,id}) {
 
     const handleDelete = () =>{
-        localStorage.removeItem("Bloco");
-        func(bloco);
+        func(id);
         reset(false);
     }
     
