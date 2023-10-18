@@ -20,6 +20,10 @@ export default function AdicionarBlock() {
             setBlock(...block,JSON.parse(storedData));
             setId(JSON.parse(storedId));
         }
+        if(numBlock!=0){
+            setBlock(block);
+            setNumBlock(0)
+        }
     },[])
     
     useEffect((storedId)=>{
@@ -50,7 +54,7 @@ export default function AdicionarBlock() {
     const serchBlock = (e) => {
         e.preventDefault()
         setOutherBlock(block);
-        const results = block.filter((bloco)=> bloco.name.includes(search) );
+        const results = block.filter((bloco)=> bloco.produto.includes(search) );
         if(search!="" && numBlock===0){
             setBlock(results);
             setNumBlock(numBlock+1);

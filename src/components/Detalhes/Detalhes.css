@@ -40,5 +40,8 @@
     gap: 2px;
 }   
 
-@media only screen and (max-device-width: 900px) {  
+@media only screen and (max-device-width: 900px) { 
+    .popupDetalhes{
+        margin: 10px;
+    }
 }
