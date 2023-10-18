@@ -117,7 +117,7 @@
         width: 100%;
         max-width: 400px;
         height: 100%;
-        max-height: 450px;
+        max-height: 420px;
         padding: 15px;
         margin: 12px;
         overflow: hidden;
@@ -140,6 +140,42 @@
         height: 10px;
     }
 
+    .inputChild-2{
+        width: 100%;
+        width:175px;
+        height: 10px;
+    }
+    
+    .inputChild-3{
+        width: 100%;
+        width:50px;
+        height: 10px;
+    }
+    
+    .inputChild-4{
+        width: 100%;
+        width:175px;
+        height: 10px;
+    }
+    
+    .inputChild-5{
+        width: 100%;
+        width: 50px;
+        height: 10px;
+    }
+    
+    .inputChild-6{
+        width: 100%;
+        max-width:116px;
+        height: 10px;
+    }
+    
+    #inputChild-7{
+        width: 100%;
+        max-width:116px;
+        height: 10px;
+    }
+
     #inputChild-2,#inputChild-3,#inputChild-4,#inputChild-5,#inputChild-6,#inputChild-7{
         max-width: 135px;
         width: 100%;
@@ -149,7 +185,7 @@
     .inputArea{
         width: 100%;
         max-width: 310px;
-        height: 140px;
+        height: 120px;
         border-radius: 21px;
         padding: 8px;
         border: 1px solid #c9c9c9;
