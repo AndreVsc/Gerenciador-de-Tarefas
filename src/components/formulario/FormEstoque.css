@@ -135,32 +135,33 @@
         overflow:scroll;
     }
 
-    #inputChild-1{
-        width: 300px;
+    .inputChild-1{
+        width: 100%;
+        max-width: 256  px;
         height: 10px;
     }
 
     .inputChild-2{
         width: 100%;
-        width:175px;
+        max-width:175px;
         height: 10px;
     }
     
     .inputChild-3{
         width: 100%;
-        width:50px;
+        max-width:50px;
         height: 10px;
     }
     
     .inputChild-4{
         width: 100%;
-        width:175px;
+        max-width:175px;
         height: 10px;
     }
     
     .inputChild-5{
         width: 100%;
-        width: 50px;
+        max-width: 50px;
         height: 10px;
     }
     
@@ -173,12 +174,6 @@
     #inputChild-7{
         width: 100%;
         max-width:116px;
-        height: 10px;
-    }
-
-    #inputChild-2,#inputChild-3,#inputChild-4,#inputChild-5,#inputChild-6,#inputChild-7{
-        max-width: 135px;
-        width: 100%;
         height: 10px;
     }
 
@@ -197,10 +192,10 @@
 
 }
 
-@media only screen and (max-device-width: 395px) {
-    #inputChild-1{
-        display: flex;
-        width: 140px;
+@media only screen and (max-device-width: 355px) {
+    .inputChild-1,.inputChild-2,.inputChild-3,.inputChild-4,.inputChild-5,.inputChild-6,.inputChild-7{
+        width: 100%;
+        max-width: 140px;
         height: 10px;
     }
 }   
