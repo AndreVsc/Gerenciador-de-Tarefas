@@ -42,7 +42,7 @@
     overflow: visible;
 }
 
-.inputChild-1{
+.inputChild{
     width: 100%;
     max-width:370px;
     height: 15px;
@@ -135,9 +135,9 @@
         overflow:scroll;
     }
 
-    .inputChild-1{
+    .inputChild{
         width: 100%;
-        max-width: 256  px;
+        max-width:256px;
         height: 10px;
     }
 
@@ -193,7 +193,7 @@
 }
 
 @media only screen and (max-device-width: 355px) {
-    .inputChild-1,.inputChild-2,.inputChild-3,.inputChild-4,.inputChild-5,.inputChild-6,.inputChild-7{
+    .inputChild,.inputChild-2,.inputChild-3,.inputChild-4,.inputChild-5,.inputChild-6,.inputChild-7{
         width: 100%;
         max-width: 140px;
         height: 10px;
