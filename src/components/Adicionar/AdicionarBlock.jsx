@@ -14,8 +14,8 @@ export default function AdicionarBlock() {
     const [id, setId] = useState(0);
     
     useEffect(()=>{
-        const storedData = localStorage.getItem("Bloco");
-        const storedId = localStorage.getItem("Id");
+        const storedData = localStorage.getItem("produtoData");
+        const storedId = localStorage.getItem("idProduto");
         if (storedData) {
             setBlock(...block,JSON.parse(storedData));
             setId(JSON.parse(storedId));
@@ -25,21 +25,12 @@ export default function AdicionarBlock() {
     useEffect((storedId)=>{
 
         if(id>0){
-            localStorage.setItem("Bloco",JSON.stringify(block));
-            localStorage.setItem("Id",id);
+            localStorage.setItem("produtoData",JSON.stringify(block));
         }else if(id==0 && storedId){
-            setId(localStorage.getItem("Id"));
+            setId(localStorage.getItem("idProduto"));
         }
         
-    },[id])
-    
-    const addBlock = () => {
-        if(numBlock!=1){
-            const novoBloco = { id, name: `Bloco ${id + 1}`, qtd: 0 };
-            setBlock([...block, novoBloco]);
-            setId(id + 1);
-        }
-    };
+    },[id]);
     
     const alterBlock = ()=>{
         if(numBlock!=0){
@@ -51,7 +42,7 @@ export default function AdicionarBlock() {
     const onDeleteBlock = (blocoId) => {
         if(numBlock!=1){
             const novaListaDeBlocos = block.filter((bloco) => bloco.id !== blocoId);
-            localStorage.setItem("Bloco",JSON.stringify(novaListaDeBlocos));
+            localStorage.setItem("produtoData",JSON.stringify(novaListaDeBlocos));
             setBlock(novaListaDeBlocos);
         }
     }
@@ -82,9 +73,12 @@ export default function AdicionarBlock() {
                     </form>
                 </div>
                 <div id='containerRolagem'>                
-                    {block==''?(<p className='textp'>Nenhum Produto</p>):(<BlockLista  blocos={block} onDeleteBlock={onDeleteBlock} alter={alterBlock}/>)}
+                    {block==''?(<p className='textp'>Nenhum Produto</p>):(<BlockLista  id={id} blocos={block} onDeleteBlock={onDeleteBlock} alter={alterBlock}/>)}
                 </div>
             </div>
         </>
     );
 }
+
+
+// gasto: valor ;  retorno: valor ; lucro: valor ;

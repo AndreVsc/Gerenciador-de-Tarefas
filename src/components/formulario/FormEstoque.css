@@ -42,37 +42,37 @@
     overflow: visible;
 }
 
-#inputChild-1{
+.inputChild-1{
     width: 100%;
     max-width:370px;
     height: 15px;
 }
 
-#inputChild-2{
+.inputChild-2{
     width: 100%;
     max-width:235px;
     height: 15px;
 }
 
-#inputChild-3{
+.inputChild-3{
     width: 100%;
     max-width:90px;
     height: 15px;
 }
 
-#inputChild-4{
+.inputChild-4{
     width: 100%;
     max-width:235px;
     height: 15px;
 }
 
-#inputChild-5{
+.inputChild-5{
     width: 100%;
     max-width:90px;
     height: 15px;
 }
 
-#inputChild-6{
+.inputChild-6{
     width: 100%;
     max-width:162px;
     height: 15px;

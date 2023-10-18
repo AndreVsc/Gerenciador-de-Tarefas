@@ -1,54 +1,51 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React from 'react';
+import { useState,useEffect } from 'react';
 import './FormEstoque.css';
 import { Link } from 'react-router-dom';
 
 export default function FormEstoque() {
 
-  const [produtoData, setProdutoData] = useState({
-    produto: "",
-    marca: "",
-    quantidade: "",
-    fornecedor: "",
-    minimo: "",
-    venda: "",
-    custo: "",
-    obs: ""
-  });
-
-  function enviarProduto(){
+  const [produtoData, setProdutoData] = useState([]);
+  const [produto, setProduto] = useState([]);
+  const [idProduto, setIdProduto] = useState(0);
+  
+  useEffect(()=>{
+    // Certifique-se de que produtoData seja uma matriz (array)
+    setProdutoData(JSON.parse(localStorage.getItem('produtoData')) || []);
+    setIdProduto(parseInt(localStorage.getItem('idProduto')) || 0);
+  },[])
+  
+  function enviarProdutos() {
+    // Incremente o ID antes de associá-lo ao novo produto
+    const novoProduto = { ...produto, id: idProduto + 1 };
+    // Adicione o novo produto à matriz
+    setProdutoData(produtoData.push(novoProduto));
+    // Atualize o localStorage com os dados atualizados
     localStorage.setItem('produtoData', JSON.stringify(produtoData));
-    
+    localStorage.setItem('idProduto',idProduto+1);
   }
 
-  useEffect(()=>{
-    setProdutoData({
-      produto: "",
-      marca: "",
-      quantidade: "",
-      fornecedor: "",
-      minimo: "",
-      venda: "",
-      custo: "",
-      obs: ""
-    });
-  },[])
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setProduto({ ...produto, [name]: value });
+  };
+
 
   return (
     <div className='containerForm'>
             <form id='formEstoque'>
                 <div id='inputsEstoque'>
-                    <input id='inputChild-1' onChange={(e)=>setProdutoData({ ...produtoData, produto: e.target.value })} className='inputText' type="text" placeholder='Nome do Produto' />
-                    <input id='inputChild-2' onChange={(e)=>setProdutoData({ ...produtoData, marca: e.target.value })} className='inputText' type="text" placeholder='Marca'/>
-                    <input id='inputChild-3' onChange={(e)=>setProdutoData({ ...produtoData, quantidade: e.target.value })} className='inputText' type="number" placeholder='Quantidade'/>
-                    <input id='inputChild-4' onChange={(e)=>setProdutoData({ ...produtoData, fornecedor: e.target.value })} className='inputText' type="text" placeholder='Fornecedor'/>
-                    <input id='inputChild-5' onChange={(e)=>setProdutoData({ ...produtoData, minimo: e.target.value })} className='inputText' type="number" placeholder='Minimo'/>
-                    <input id='inputChild-6' onChange={(e)=>setProdutoData({ ...produtoData, venda: e.target.value })} className='inputText' type="number" placeholder='Valor de Venda'/>
-                    <input id='inputChild-7' onChange={(e)=>setProdutoData({ ...produtoData, custo: e.target.value })} className='inputText' type="number" placeholder='Custo do Produto'/>
+                    <input className='inputChild-1 inputText' name='produto' value={produto.produto} onChange={handleInputChange} type="text" placeholder='Nome do Produto' />
+                    <input className='inputChild-2 inputText' name='marca' value={produto.marca} onChange={handleInputChange} type="text" placeholder='Marca'/>
+                    <input className='inputChild-3 inputText' name='quantidade' value={produto.quantidade} onChange={handleInputChange} type="number" placeholder='Quantidade'/>
+                    <input className='inputChild-4 inputText' name='fornecedor' value={produto.fornecedor} onChange={handleInputChange} type="text" placeholder='Fornecedor'/>
+                    <input className='inputChild-5 inputText' name='minimo' value={produto.minimo} onChange={handleInputChange} type="number" placeholder='Minimo'/>
+                    <input className='inputChild-6 inputText' name='venda' value={produto.venda} onChange={handleInputChange} type="number" placeholder='Valor de Venda'/>
+                    <input className='inputChild-7 inputText' name='custo' value={produto.custo} onChange={handleInputChange} type="number" placeholder='Custo do Produto'/>
                 </div>
-                <textarea className='inputArea'  onChange={(e)=>setProdutoData({ ...produtoData, obs: e.target.value })} type="text" placeholder='Obs'/>
-                <Link to="/" onClick={enviarProduto} id='inputBnt' className='bnt-b link-btn'> Criar Produto </Link> 
+                <textarea className='inputArea'  name='obs' value={produto.obs} onChange={handleInputChange} type="text" placeholder='Obs'/>
+                <Link to="/" onClick={enviarProdutos} id='inputBnt' className='bnt-b link-btn'> Criar Produto </Link> 
             </form>
     </div>
-  ) 
+  );
 }
