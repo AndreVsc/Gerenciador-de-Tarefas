@@ -35,7 +35,7 @@ export default function FormEstoque() {
     <div className='containerForm'>
             <form id='formEstoque'>
                 <div id='inputsEstoque'>
-                    <input className='inputChild-1 inputText' name='produto' value={produto.produto} onChange={handleInputChange} type="text" placeholder='Nome do Produto' />
+                    <input className='inputChild inputText' name='produto' value={produto.produto} onChange={handleInputChange} type="text" placeholder='Nome do Produto' />
                     <input className='inputChild-2 inputText' name='marca' value={produto.marca} onChange={handleInputChange} type="text" placeholder='Marca'/>
                     <input className='inputChild-3 inputText' name='quantidade' value={produto.quantidade} onChange={handleInputChange} type="number" placeholder='Quantidade'/>
                     <input className='inputChild-4 inputText' name='fornecedor' value={produto.fornecedor} onChange={handleInputChange} type="text" placeholder='Fornecedor'/>
