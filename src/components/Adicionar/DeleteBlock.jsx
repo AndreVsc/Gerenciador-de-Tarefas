@@ -1,6 +1,6 @@
 import React from 'react';
 import './DeleteBlock.css';
-import Button from '../button/Button';
+import Button from '../Button/Button';
 function DeleteBlock({reset,func,id}) {
 
     const handleDelete = () =>{
