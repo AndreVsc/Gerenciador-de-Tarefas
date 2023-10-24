@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RiDeleteBin5Line } from "react-icons/ri";
-import Button from '../button/Button';
+import Button from '../Button/Button';
 import './BlockLista.css';
 import DeleteBlock from './DeleteBlock';
 import Detalhes from '../Detalhes/Detalhes';
@@ -47,7 +47,7 @@ export default function BlockLista({ blocos, onDeleteBlock ,alter}) {
                 {blocos.map((bloco) => (
                     <li key={bloco.id}>
                         <p id='idBlock'>{bloco.venda} R$</p>
-                        <p onClick={() => mostrarDetalhes(bloco.id)} className='nameBlock'>{bloco.produto}</p>
+                        <p onClick={() => mostrarDetalhes(bloco.id)} className='nomeProduto'>{bloco.produto}</p>
                         <div><p>{bloco.quantidade}x</p></div>
                         <div id='buttonsBlock'>
                         <Button func={() => mostrarTudo(bloco.id)} value={<RiDeleteBin5Line fontSize={15} />} classN='bnt-b' />

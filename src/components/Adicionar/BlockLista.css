@@ -26,9 +26,10 @@
     color: rgb(88, 88, 88);
 }
 
-#nameBlock{
+.nomeProduto{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 #buttonsBlock{
