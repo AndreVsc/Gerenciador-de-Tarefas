@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RiDeleteBin5Line } from "react-icons/ri";
-import Button from '../Button/Button';
+import Button from './../button/Button.jsx';
 import './BlockLista.css';
 import DeleteBlock from './DeleteBlock';
 import Detalhes from '../Detalhes/Detalhes';

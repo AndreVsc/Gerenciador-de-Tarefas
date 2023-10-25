@@ -1,6 +1,6 @@
 import React from 'react';
 import './Detalhes.css';
-import Button from '../Button/Button';
+import Button from './../button/Button';
 export default function Detalhes({reset,storeData,id}) {
 
   const blocos = [storeData.find(bloco => bloco.id === id)];
