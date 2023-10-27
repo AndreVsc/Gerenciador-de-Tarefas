@@ -68,12 +68,12 @@
     outline: none;
 }   
   
-  .textp{
+.textp{
     user-select:none;
     margin-top: 100px;
     text-align: center;
     color: #777777;
-  }
+}
 
   #containerSearch{
     display: flex;
