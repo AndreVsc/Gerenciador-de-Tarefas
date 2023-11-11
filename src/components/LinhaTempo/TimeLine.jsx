@@ -16,13 +16,7 @@ function TimeLine() {
           <div className='pLeg'><p><div className='blueLed'></div>criação</p></div>
         </div>
         <div className='containerHist'>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
-          <input type="text" className='inputHist' disabled/>
+          
         </div>
     </div>
   );
